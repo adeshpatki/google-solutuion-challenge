@@ -1,0 +1,47 @@
+body{
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.75em;
+}
+#image{
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 3px 3px 3px #ccc;
+}
+article{
+    text-align: justify;;
+}
+#flex{
+    border-left: 2px solid #4895ef;
+    padding-left: 24px;
+}
+#flex div{
+    margin-bottom: 24px;
+    position: relative;
+}
+
+#flex div::before{
+    content: '';
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    background-color: #3f37c9;
+    border-radius: 50%;
+    left: -31px;
+    top: 6px;
+}
+
+#flex .sub-header{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+#flex div span{
+    font-size: 14px;
+}
+.bg{
+    background-color: #e3f2fd;
+}
+h2{
+    width: max-content;
+}

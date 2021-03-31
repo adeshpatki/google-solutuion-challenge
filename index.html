@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+
+
+
+
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Sign in & Sign up Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form id="loginform" action="#" class="sign-in-form">
+            <h2 class="title">Sign in</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Email" id="lgemail"/>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input onclick="login()" type="password" placeholder="Password" id="lgpass" />
+            </div>
+            <input type="submit" value="Login" class="btn solid" />
+            <p class="social-text">Or Sign in with social platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+          <form id="signup" action="#" class="sign-up-form">
+            <h2 class="title">Sign up</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input id="sgusername" type="text" placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input id="sgemail" type="email" placeholder="Email" />
+            </div>
+            <a><h6> password at least 6 charecters long</h6></a> 
+            <div class="input-field">
+             
+              <i class="fas fa-lock"></i>
+              
+              <input id="sgpass" type="password" placeholder="Password" />
+              
+            </div>
+            
+
+            <input type="submit" class="btn" value="Sign up" />
+            <p class="social-text">Or Sign up with social platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>New here ?</h3>
+            <p>
+              Sign up to get an assistance or be familier with the imperative stucture of peace and justice in the society 
+            </p>
+            <button class="btn transparent" id="sign-up-btn">
+              Sign up
+            </button>
+          </div>
+          <img src="img/Lawyer_Two Color (1).svg" class="image" alt="" />
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>One of us ?</h3>
+            <p>
+              Welcome back!! login here to get our services
+            </p>
+            <button class="btn transparent" id="sign-in-btn">
+              Sign in
+            </button>
+          </div>
+          <img src="img/jug2.svg" class="image" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDmFutSKwhfeOyVcKV0k_LXIVfjHPT-2Wk",
+    authDomain: "solution-40df4.firebaseapp.com",
+    projectId: "solution-40df4",
+    storageBucket: "solution-40df4.appspot.com",
+    messagingSenderId: "562698864712",
+    appId: "1:562698864712:web:4a05e08360d65d523ef07d",
+    measurementId: "G-ZFPCDQY6KQ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  firebase.analytics();
+  // make auth and firestore
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+
+  //update firestore sett
+  db.settings({ timestampsInSnapshots: true});
+
+  
+
+
+
+</script>
+<script src="form.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

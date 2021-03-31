@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="alan.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <h3>QUERY FORUM</h3>
+        <p>Get your queries cleared on one click of button present at the bottom left corner.</p>
+        <div class="circle">
+
+        </div>
+    </div>
+    <div class="alan-btn"></div>
+
+
+
+
+
+    <script type="text/javascript" src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+    <script>
+        var alanBtnInstance = alanBtn({
+            key: "7c05bf174fe9ebcdc39be3dc4ff10dfc2e956eca572e1d8b807a3e2338fdd0dc/stage",
+            onCommand: function(commandData) {
+                if (commandData.command === "go:back") {
+                    //call client code that will react on the received command
+                }
+            },
+            rootEl: document.getElementById("alan-btn"),
+            bottom: '470px',
+            left: '80%',
+            position: 'static',
+        });
+    </script>
+</body>
+
+</html>
